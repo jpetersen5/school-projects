@@ -1,0 +1,25 @@
+
+function combineStr(input string, input number of times) {
+	
+	for loop number of times {
+		input string += input string
+	}
+	
+	return combined string
+}
+
+
+function main {
+
+	initialize variables
+	
+	while loop until # times == 0 {
+		input string and # times
+		
+		call combineStr(input string, input # of times)
+		
+		"The resulting string is " + combined string
+	}
+	
+	return 0;
+}

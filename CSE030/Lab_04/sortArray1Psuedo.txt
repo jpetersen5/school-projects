@@ -1,0 +1,21 @@
+
+void sortArr(bool order, int arr[], int size) {
+	if descending {
+		for loop size {
+			initialize maximum value
+			for loop {
+				search through array for any larger value
+			}
+			swap largest value to front of array
+		}
+	}
+	else if ascending {
+		for loop size {
+			initialize minimum value
+			for loop {
+				search through array for any smaller value
+			}
+			swap smallest value to front of array
+		}
+	}
+}

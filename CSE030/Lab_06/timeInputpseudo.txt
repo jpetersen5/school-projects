@@ -1,0 +1,18 @@
+
+
+bool getTimeFromUser(Time &userTime) {
+	string inputTime
+	getline(inputTime)
+	
+	if (":" does not exist twice)
+		return false
+	
+	userTime.hr <- int "HH" from inputTime
+	userTime.min <- int "MM" from inputTime
+	userTime.sec <- int "SS" from inputTime
+	
+	if (hr or min or sec < 0) or (hr > 23) or (min or sec > 59)
+		return false
+
+	return true
+}

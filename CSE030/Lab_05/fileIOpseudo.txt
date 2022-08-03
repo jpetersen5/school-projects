@@ -1,0 +1,25 @@
+
+
+main { 
+	open words_in.txt
+	
+	int lines
+	
+	while (not end of file) {
+		getline
+		lines++
+	}
+	
+	wordsArr = new string [lines]
+	
+	for (each line) {
+		getline
+		file >> wordsArr[i]
+	}
+	
+	create words_out.txt
+	
+	for (each line) {
+		words_out.txt << wordsArr[i]
+	}
+}

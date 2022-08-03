@@ -1,0 +1,33 @@
+
+main {
+	
+	int array dimensions
+	
+	output: enter array dimensions
+	input: array dimensions
+	
+	if array dimensions are incorrect {
+		output: incorrect array dimensions!
+	}
+	
+	int array of array dimensions
+	int negatives count
+	
+	for loop through array {
+		
+		output: enter elements for row #
+		
+		for loop through # of inputs {
+			input: value at [#][#]
+			
+			if value is negative {
+				increment negatives count
+			}
+		}
+	}
+		
+	output: negatives count
+	
+	end file
+	
+}

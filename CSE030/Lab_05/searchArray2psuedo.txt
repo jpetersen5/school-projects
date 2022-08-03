@@ -1,0 +1,19 @@
+
+
+int binarySearchL(string* A, int array_size, string key) {
+	
+	int bounds
+	int mid
+	
+	while (key could exist) {
+		if (mid equals key) 
+			return mid
+		if (mid is less than key)
+			start bound = mid
+		if (mid is more than key)
+			end bound = mid
+		calculate mid
+	}
+	
+	return -1 if search fails
+}

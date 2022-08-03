@@ -1,0 +1,20 @@
+
+
+main {
+
+	string input_var
+	
+	output: string to reverse
+	input: input_var
+	
+	string reverse_input
+	
+	for reverse increment through input_var {
+		reverse_input = input_var[i]
+	}
+	
+	output: the reverse of the string is reverse_input
+	
+	end file
+	
+}

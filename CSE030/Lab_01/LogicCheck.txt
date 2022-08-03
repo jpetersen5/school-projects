@@ -1,0 +1,14 @@
+1. How would you change the executable name from main to cselab? 
+
+	Use the following shell command:
+	mv main cselab
+	
+	
+2. What happens when you compile using g++ <source> only? 
+
+	It creates a default executable named a.out.
+	
+	
+3. How can you remove the line using namespace std; from your program and get it to compile. 
+
+	For any functions from the standard namespace, put "std::" in front of them after removing "namespace std;".

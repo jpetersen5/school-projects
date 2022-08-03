@@ -1,0 +1,16 @@
+
+
+int checkArraySort(string* A, int array_size) {
+	int sort_direction = A[0] < A[1] ? 1 : -1
+	
+	for (each item) {
+		if (ascending && next element follows the rule)
+			continue;
+		else if (descending && next element follows the rule)
+			continue;
+		else
+			return 0;
+	}
+	
+	return sort_direction
+}

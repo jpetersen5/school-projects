@@ -1,0 +1,15 @@
+
+
+int binarySearchR(string* A, int array_size, string key) {
+
+	mid = array_size / 2
+	
+	if (mid is greater than key)
+		recursion with bounds from 0 to mid
+	else if (mid is less than key)
+		recursion with bounds from mid to end
+	else if (mid is equal to key)
+		return mid
+	
+	return -1 if search failed
+}

@@ -1,0 +1,21 @@
+
+void sortArr(bool order, int arr[], int size) {
+	if descending {
+		for i = 1 < size {
+			temporary save arr[i]
+			while in bounds and arr[j-1] < saved value {
+				replace arr[j] and decrement
+			}
+			arr[j] = saved value
+		}
+	}
+	else if ascending {
+		for i = 1 < size {
+			temporary save arr[i]
+			while in bounds and arr[j-1] > saved value {
+				replace arr[j] and decrement
+			}
+			arr[j] = saved value
+		}
+	}
+}

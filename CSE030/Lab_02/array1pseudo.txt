@@ -1,0 +1,31 @@
+
+main {
+	int array_size
+	
+	output: enter the size of the array
+	input: array_size
+	
+	if array_size invalid {
+		output: error
+		end file
+	}
+	
+	int array of array_size
+	output: enter the numbers for the array
+	
+	for i = 0 to array_size {
+		input: number at array location i
+		
+		if number at array location < number at previous array location {
+			output: NOT increasing
+			end file
+		}
+	}
+	
+	output: IS increasing
+	
+	end file
+	
+}
+	
+	
