@@ -1,0 +1,41 @@
+---TPS 1---
+1. I expect MemCast.c to print just 2 and a new line
+
+2. I think it will print 2 again
+
+3. It did not print 2, it printed 44434241 probably from four_c being assigned to the memory where
+   four_ints[0] was.
+
+4. Not surprised, since four_c being assigned to four_ints only modified four_ints[0] when the for
+   loop was run. This is because each of four_ints elements takes up 4 bytes of space, whereas
+   four_c takes up 4 bytes total (1 byte per element). four_ints[1] was never changed
+
+5. a. Two arrays, four_ints and four_c
+   b. After "four_c = (char*)four_ints" is called, yes
+   c. Yes, they have the same pointer address
+
+6. Each pointer is 4 bytes apart, since the size of an int is 4 bytes. This is significant because
+   it is different from the pointers in an array of chars for example, which would be 1 byte apart
+   each. 
+
+7. memcast.png
+
+8. There is only 1 byte difference in each address since a char takes only 1 byte of memory.
+
+9. memcast.png
+
+10. Based on the type cast to the array, C changes how many bytes it increments by when changed.
+
+
+---TPS 2---
+1. Line 8 dynamically allocates a double-pointer array using malloc, the provided int n, and the
+   byte size of int* type.
+
+2. *(arr + i)
+
+3. *(*(arr + i) + j)
+
+4. Size is passed to prevent accidentally printing out-of-bounds memory. Known size is much easier
+   to work with.
+
+

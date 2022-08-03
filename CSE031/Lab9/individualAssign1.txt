@@ -1,0 +1,57 @@
+Line #7:
+	hex: 0x2010fff1
+	binary: 001000 00000 10000 1111111111110001
+	I-format
+	4 fields: opcode = 8, rs = 0, rt = 10,
+			  immediate = 65521 - 2^16 = -15
+	opcode 8 means the instruction is addi, rs 0 is
+	$zero, rt 10 is $s0, immediate to be added is -15
+
+	The MIPS instruction is:
+	addi $s0, $zero, -15
+
+
+Line #14:
+	hex: 0x0211402a
+	binary: 000000 10000 10001 01000 00000 101010
+	R-format
+	6 fields: opcode = 0, rs = 10, rt = 11, rd = 8,
+			  shamt = 0, funct = 2a
+	opcode 0 means R-format, rs 10 is $s0,
+	rs 11 is $s1, rd 8 is $t0, shamt 0 means the value
+	is unshifted, funct 2a means the instruction is slt
+
+	The MIPS instruction is: 
+	slt $t0, $s0, $s1
+
+
+Line #17:
+	hex: 0x11000006
+	binary: 000100 01000 00000 0000000000000110
+	I-format
+	4 fields: opcode = 4, rs = 8, rt = 0, immediate = 6
+	opcode 4 means the instruction is beq, rs 8 is $t0,
+	rs 0 is $zero, and immediate 6 means a 6 instruction
+	difference to branch over to get to the label.
+	The label's address is (0x00400014 + 4*1) + 4*6
+	= 0x00400030. The label here is LEEQ
+
+	The MIPS instruction is:
+	beq $t0, $zero, LEEQ
+
+Line #20:
+	hex: 0x08100007
+	binary: 000010 00000100000000000000000111
+	J-format
+	2 fields: opcode = 2, address = 0x00100007
+			  fixed address = 0x0040001c
+	opcode 2 means the instruction is j. Since the
+	address has to be "squeezed" with 4 bits taken from
+	the higher order and 2 bits taken from the lower
+	order, converting back to hex from the input field
+	requires adding those bits back in. The fixed
+	address is 0x0040001c, which is where the label GRT
+	is stored.
+
+	The MIPS instruction is:
+	j GRT

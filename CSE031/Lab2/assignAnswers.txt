@@ -1,0 +1,28 @@
+---Assignment 1---
+
+1. Line 18, in the read_values function: "scanf("%d", input);"
+
+2. Add a dereference operator to the line so that the types match
+   scanf("%d", &input);
+   
+3. Sum is being changed in the read_values function, but after the function finishes sum in main is unchanged.
+
+4. Change read_values to call by reference, changing the following lines
+   10   int read_values(double *sum) {
+   12   // sum = 0
+   17   *sum += input;
+   26   values = read_values(&sum);
+   
+
+---Assignment 2---
+
+1. No, the expected output is "HELLO!hello!" but actual output is "HELLO!hello!llo!"
+
+2. No, the expected output is "HI!hi!" but actual output is "HI!hi!hellhi!"
+   It looks like accidental characters are being appended as well due to a lack of end character.
+   This is fixed by adding the line "s1[s2len+s1len] = '\0';" after the for loop in append
+
+3. str1 isn't complete, str2 is appended twice, then also some junk characters that don't display properly. 
+   Because the strings are longer than the space allocated, the append function gets kind of funky writing in 
+   space that isn't allocated by the string arrays
+

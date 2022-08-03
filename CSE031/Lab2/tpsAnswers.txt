@@ -1,0 +1,50 @@
+---TPS 1---
+
+1. Jason Petersen
+Emerald Nash
+Eric Contreras
+Hrishikesh Tiwari
+
+2. https://lldb.llvm.org/use/tutorial.html
+https://ftp.gnu.org/old-gnu/Manuals/gdb/html_chapter/gdb_27.html#:~:text=The%20simplest%20way%20to%20configure,in%20it%3B%20then%20run%20configure%20.
+https://www.tutorialspoint.com/gnu_debugger/installing_gdb.htm
+
+
+---TPS 2---
+
+1. gcc -g punishment.c -o punish
+
+2. gdb punish
+
+3. (gdb) run
+
+4. A breakpoint is an intentional pause in a program in order to better debug code
+(gdb) b 37
+
+5. (gdb) step / (gdb) s / (gdb) next / (gdb) n / (gdb) 
+
+6. (gdb) print [variable] / (gdb) p [variable]
+
+7. (gdb) c / (gdb) f
+
+8. (gdb) quit / (gdb) q
+
+
+---TPS 3---
+
+1. 4 variables, 2 pointers px and py 
+
+2. Junk values, since they are not initialized to anything (and just take up a random open memory space)
+
+3. Initialize values to them
+
+4. printf("x address: %d\n", &x);
+
+5. int *px = &x, *py = &y;
+   printf("px value: %p\npx address: %p\n", px, &px);
+
+6. for (int i = 0; i < arrSize; i++) printf("%d ",*(arr+i));
+
+7. *arr points to 0, the value at arr[0]
+
+8. Yes, because an array is just a pointer

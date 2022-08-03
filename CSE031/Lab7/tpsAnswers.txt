@@ -1,0 +1,37 @@
+---TPS 1---
+1. A procedure is a series of actions. A function is a
+   basic task. A method is a systematic procedure.
+
+4. Line 20; this line sums the two variables into the
+   register used for jr
+
+5. No, a function would not be able to be called multiple
+   times if it was built this way.
+
+6. At line 11 the register is being set to 0, which does
+   not make sense and would cause errors.
+
+7. Error in : invalid program counter value: 0x00000000
+
+8. 0x00400020
+
+9. It was moved down 2 instructions and $ra is now
+   incorrect.
+
+10. The address is now 0x00400028. Output is 15
+
+11. Use jal instead of j
+
+
+---TPS 2---
+1. 38
+
+3. When SUM calls SUB, $ra is changed to the address
+   right after jal SUB is called, so jr $ra in SUM returns
+   there instead and the program will get stuck in a loop.
+
+4. Backup values in memory
+
+5. $s0 is overwritten, which causes issues after jal SUM
+   in MAIN since $s0 is used assuming the previous value.
+

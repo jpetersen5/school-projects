@@ -1,0 +1,20 @@
+---TPS 1---
+
+1. Static: for global variable storage
+   Stack: for local variable storage
+   Heap: for dynamic storage
+   
+2. a. 3 variables
+   b. 2 are pointers, ptr points to the int num and handle points to the int pointer ptr
+   c. ptr and handle are created in the stack, but the memory they store is in the heap. num is on the stack
+   d. Since ptr points to num, it's pointing to the stack
+
+
+---TPS 2---
+
+1. NodeStruct.c defines the struct Node that holds an int and a float, and of course the pointer to the next node.
+   A first node named head is dynamically allocated in main, with the values 5 and 3.14. 
+   
+3. The structs contents are stored in the heap whereas the structs address is in the stack. 
+   head's destination is the start of the Node, where the int iValue is stored but not pointing to the same thing
+

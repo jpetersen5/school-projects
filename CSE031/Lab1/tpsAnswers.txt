@@ -1,0 +1,45 @@
+--- TPS 1 ---
+1. Names:
+Jason Petersen
+ALexander Lagarda
+Kieran Pfann
+Zhong Cai
+
+2. Tutorials: 
+https://opensource.com/article/21/8/linux-terminal
+https://ubuntu.com/tutorials/command-line-for-beginners
+https://www.codecademy.com/learn/learn-the-command-line
+
+
+--- TPS 2 ---
+1. Launch the terminal program by searching for it or pressing Ctrl-Alt-T
+In ubuntu on windows, launch the ubuntu program from shortcut or launch menu
+	a. Yes
+	b. If you are running multiple processes simultaneously
+
+2. ls (list command)
+
+3. cd ~\Desktop
+
+4. mkdir CSE31
+
+
+--- TPS 3 ---
+1. Tutorials:
+https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/
+https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
+
+3. gcc main.c -o main
+
+4. The terminal processes the command without throwing any errors and ./main can be run
+
+5. -c compiles the source file to a .o or object file only
+
+6. -g generates debug information
+
+7. Recompile with the command "gcc main.c -o cselab1" or use "mv main cselab1"
+
+8. Creates a file named a.out
+
+9. ./[output file name]
+

@@ -1,0 +1,51 @@
+---TPS 1---
+4. 32 bits
+
+5. The three formats are I, J, and R.
+   I-format have two registers and an immediate in the
+   instruction. Ex: addi, beq
+   J-format have an address in the instruction
+   Ex: j, jal
+   R-format have 2 operand registers, a register
+   destination, and a shift amount. Ex: add, slt
+
+6. addi $s0, $zero, 25
+   a. I-format, 4 fields: opcode, rs, rt, immediate
+   b. opcode = 8, rs = $0 (hex 0), rt = $s0 (hex 10),
+      immediate = 19 (in hex)
+   c. binary: 001000 00000 10000 0000000000011001
+      hex: 0x20100019
+
+7. a. hex: 0x0230402a
+	  binary: 000000 10001 10000 01000 00000 101010
+   b. The instruction is R-format, because all R-format
+	  instructions opcodes are 0 (first 6 bits)
+	  6 fields: opcode, rs, rt, rd, shamt, funct
+   c. opcode: 0, rs: 11, rt: 10, rd: 8, shamt: 0,
+      funct: 2a
+   d. The operation is slt, since it matches the function
+	  code 2a. rs: $s1, rt: $s0, rd: $t0
+   e. slt $t0, $s1, $s0
+      Yes, it matches the program's line
+
+8. a. I-format
+   b. opcode: 5, rs: 8, rt: 0
+   c. Target label: LESS. Address: 0x0040001c
+   d. No, the value would take up too many bits
+   e. The value is the difference of the destination
+	  address and the sum of the current instruction's
+	  address + 1. 0x0040001c - (0x00400014 + 1) = 1
+   f. binary: 000101 01000 00000 0000000000000001
+	  hex: 0x15000001
+	  Yes, it matches the program's value
+
+9. a. J-format, 2 fields
+   b. opcode: 2
+   c. Label: GREQ, Address: 0x00400030
+   d. 26 bits, drop the high order 4-bits and low order
+	  2-bits since addresses are divisible by 4 and the
+	  last 2 will always be 00. 
+	  Address in binary: 00000000010000000000000000110000
+   e. binary: 000010 00000100000000000000001100
+	  hex: 0x0810000c
+	  Yes, it matches the program's value

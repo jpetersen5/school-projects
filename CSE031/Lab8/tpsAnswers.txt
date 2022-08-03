@@ -1,0 +1,25 @@
+---TPS 1---
+5. No, n is unused and can therefore be safely
+   deleted. The la and lw instructions can be
+   replaced with an add instruction:
+   add $t3, $zero, $v0
+
+
+---TPS 2---
+1. 29
+
+5. Store the returned value into register $a0
+   (print's argument) before changing $v0
+
+7. Store the return address first
+
+10. $a0 is the argument for recursion and is
+	used in both recursion calls, so if it's
+	changed during one call then the second call
+	wouldn't be accurate.
+
+12. Calling recursion right away would overwrite
+	the last call's returned value. Store $v0 to
+	the stack to prevent it
+
+15. Return address

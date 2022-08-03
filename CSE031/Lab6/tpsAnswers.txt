@@ -1,0 +1,50 @@
+---TPS 1---
+1. Text Segment: 0x00400000
+   Data Segment: 0x10010000
+
+2. Source is an easier form of assembly to program in and is translated
+   into basic by the assembler. It looks like Basic cuts out most white-
+   space and integers are replaced by hex, and registers are replaced
+   by their number values rather than names like $zero. Also,
+   shortened versions of commands are replaced with their equivalents,
+   like subi being replaced with addi and sub.
+
+3. 32 bytes
+
+4. 8 columns
+
+5. There are 8 values with 4 byte differences at each address
+
+6. m:	.word 20
+
+7. 0x10010004
+
+8. str1: .asciiz "I love CSE31!"
+
+9. 0x10010008, 0x1001000c, 0x10010010
+
+10. The hex values are 4 characters stored in double digit ASCII codes
+	0x6f6c2049 = [0x6f,0x6c,0x20,0x49] little endian --> "I lo"
+	0x43206576 = [0x43,0x20,0x65,0x76] little endian --> "ve C"
+	0x31334553 = [0x31,0x33,0x45,0x53] little endian --> "SE31"
+	This agrees with what we learned in Lab 4.
+
+11. Set $v0 to 4, and put string as argument. Then syscall
+	la	$a0, str1
+	li	$v0, 4
+	syscall
+
+12. "la	$t3, n" loads the address of n into $t3, which means $t3 will
+	store the address and not the value of n so a lw is required to load
+	its value to $t3.
+
+
+---TPS 2---
+1. Including more instructions for each inequality would increase
+   the complexity of assembly since each instruction is translated into
+   binary and there are a limited number of possible combinations. Since
+   the current commands can be worked in a way equivalent to having all
+   the individual instructions, it's better to save on space.
+
+4. li	$v0, 5
+   syscall

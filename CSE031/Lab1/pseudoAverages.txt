@@ -1,0 +1,34 @@
+
+
+main {
+
+	int input, count=0, evenSum=0, evenNum=0, oddSum=0, oddNum=0
+
+	while (input != 0) {
+	
+		"please enter [count]th integer"
+		
+		int n = input
+		int mod, sum
+		while (n > 0) {
+			mod = n % 10
+			sum = sum + mod
+			n = n / 10
+		}
+		
+		if n is even
+			evenSum = evenSum + input
+			evenNum = evenNum + 1
+		else
+			oddSum = oddSum + input
+			oddNum = oddNum + 1
+	}
+	
+	double evenAvg = evenSum / evenNum
+	double oddAvg = oddSum / oddNum
+	
+	"Average of inputs whose digits sum up to an even number: " evenAvg
+	"Average of inputs whose digits sum up to an odd number: " oddAvg
+	
+	return 0;
+}

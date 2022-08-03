@@ -1,0 +1,46 @@
+---TPS 1---
+1. MIPS Assembler and Runtime Simulator
+
+4. a. File...Open or the Open icon
+   b. Run...Assemble or the Assemble icon
+   c. Run...Go or the Run icon
+   d. No, the icons are greyed-out
+   e. Run...Step or Single-Step icon
+   f. Run...Reset or Reset icon
+
+
+---TPS 2---
+1. .data is followed by variable declarations
+   .word creates a single int variable with an initial value
+   .text is followed by the program's instructions
+
+2. Line 10 is the start of the fib loop and checks if register
+   $t3 is equal to register $0 (which always stores 0). If it
+   is, it branches to line 17 marked finish.
+
+3. Line 15 returns to the start of fib to loop the set of
+   instructions until 'beq $t3, $0, finish' occurs and the
+   loop ends.
+
+4. In the execute tab, find line 15 and click the check box on
+   the far left to set the breakpoint. Reset and re-run and
+   the program will stop at that breakpoint.
+
+5. Use the run or step icons to continue or step through the
+   code. Since this breakpoint is in a loop, it will continue
+   to stop here unless the breakpoint box is unchecked.
+
+6. The registers and their content is on the right side of the
+   viewbox, and if you set and run into a breakpoint you can
+   edit the registers' values like a spreadsheet while the
+   program is still processing.
+
+7. n is stored at 0x10010000. Changing the value to 'd' in hex
+   makes the value 13 and the program will calculate the 13th
+   Fibonacci number.
+
+8. syscall calls a service based on the value stored at $v0.
+   Since $v0 is set to 1 before the first syscall, when
+   syscall is used it will print an integer at register $a0.
+   When $v0 is set to 10 and syscall is used, the program
+   finishes.
