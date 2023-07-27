@@ -1,5 +1,5 @@
 # school-projects
-Labs and work from UCM CSE classes (reuploaded 08/22)
+Labs and work from UCM CSE classes
 
 CSE030: Data Structures
 
