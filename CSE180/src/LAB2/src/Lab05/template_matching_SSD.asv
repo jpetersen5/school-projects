@@ -1,0 +1,43 @@
+function [output, match] = template_matching_SSD(img, template, threshold)
+    % initialize output image
+    output = img;
+    % set shift sizes
+    shift_u = floor(size(template, 2) / 2);
+    shift_v = floor(size(template, 1) / 2);
+
+    % zero pad
+    padded = zeros(size(img) + size(template) - 1);
+    padded(1+shift_u:size(padded)-shift_u, 1+shift_v:size(padded)-shift_v, :) = img;
+    % replication pad (comment out for just zero pad)
+    for r = 1:shift_u
+        % this loops through all the rows / columns of 0's and copies the
+        % edge row / column until all is filled out
+        padded(r,:,:) = padded(shift+1,:,:);
+        padded(:,r,:) = padded(:,shift+1,:);
+        padded(size(padded)+1-r,:,:) = padded(size(padded)-shift,:,:);
+        padded(:,size(padded)+1-r,:) = padded(:,size(padded)-shift,:);
+    end
+    for 
+
+    for u = 1 + shift_u : size(img, 2) - shift_u
+        for v = 1 + shift_v : size(img, 1) - shift_v
+
+            x1 = u - shift_u; x2 = u + shift_u;
+            y1 = v - shift_v; y2 = v + shift_v;
+            patch = img(y1:y2, x1:x2);
+
+            % SSD
+            value = sum(sum((patch - template).^2));
+%             value = 0;
+%             for i = 1:size(template,2)
+%                 for j = 1:size(template,1)
+%                     value = value + (patch(shift_u + i, shift_v + j) - template(i,j))^2;
+%                 end
+%             end
+            output(v, u) = value;
+
+        end
+    end
+
+    match = (output < threshold);
+end
