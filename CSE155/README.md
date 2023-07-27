@@ -1,4 +1,4 @@
-# Human-Computer Interaction - HTML (Labs), JS / jQuery / Python (Project) 
+# Human-Computer Interaction - Various (Labs), HTML / JS / jQuery / Python (Project) 
 Labs covered a variety of topics about design. Some labs are described but not included. The Currency Identitification project (see README in project directory) was a group project, my part was the Flask backend and cleaning up some of the JS.
 
 Lab 1: HTML
