@@ -1,0 +1,268 @@
+body {
+    background-color: aliceblue;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+h1 {
+    text-align: center;
+    font-size: 48pt;
+    margin-bottom: 50pt;
+    text-shadow: 1pt 1pt 5pt grey;
+}
+
+#divvid {
+    width: 400pt;
+    height: 300pt;
+    margin: 0 auto;
+}
+
+#vid {
+    width: 400pt;
+    height: 300pt;
+    object-fit: cover;
+    border: 2pt solid black;
+    border-radius: 32pt;
+    background-color: lightgray;
+    background-image: url(../img/camoff.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200pt;
+}
+
+#results {
+    text-align: center;
+}
+
+#canvas {
+    width: 400pt;
+    height: 300pt;
+    text-align: center;
+    display: none;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#t1 {
+    font-size: 18pt;
+    text-align: center;
+    text-shadow: 1pt 1pt 5pt grey;
+}
+
+#t2 {
+    font-size: 18pt;
+    text-align: right;
+}
+
+#t3 {
+    font-size: 18pt;
+    text-align: left;
+}
+
+.fullarea {
+    width: 100%;
+    height: 100%;
+}
+
+#img1 {
+    margin: 30pt 0pt 0pt 0pt;
+    padding: 10pt 10pt 10pt 10pt;
+    width: 150pt;
+    border: solid black 2pt;
+    background-color: lightgrey;
+    border-radius: 32pt;
+    box-shadow: 5pt 5pt 5pt 5pt rgba(0,0,0,.5);
+}
+
+#img2 {
+    margin: 30pt 0pt 0pt 0pt;
+    padding: 20pt 20pt 20pt 20pt;
+    width: 130pt;
+    border: solid black 2pt;
+    background-color: lightgrey;
+    border-radius: 32pt;
+    box-shadow: 5pt 5pt 5pt 5pt rgba(0,0,0,.5);
+}
+
+#coin {
+    width: 200pt;
+}
+
+#choices {
+    width: 500pt;
+    margin: 0 auto;
+    padding-top: 100pt;
+}
+
+#cambuttons {
+    width: 700pt;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#but {
+    margin-top: 40pt;
+    height: 100pt;
+    width: 100pt;
+    font-size: 20pt;
+    padding-bottom: 5pt;
+    border: black solid 2pt;
+    border-radius: 100%;
+    background-color: green;
+}
+
+#stop {
+    margin-top: 40pt;
+    vertical-align: top;
+    height: 100pt;
+    width: 100pt;
+    font-size: 20pt;
+    border: black solid 2pt;
+    border-radius: 32pt;
+    background-color: red;
+    display: none;
+}
+
+#stop:focus {
+    background-color: orange;
+}
+
+#capture {
+    margin-top: 40pt;
+    vertical-align: top;
+    height: 100pt;
+    width: 100pt;
+    font-size: 20pt;
+    border-radius: 32pt;
+    background-image: url(../img/cam.png);
+    background-size: 80pt;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: yellow;
+    border: black solid 2pt;
+    display: none;
+}
+
+#capture:focus {
+    background-color: goldenrod;
+}
+
+#send {
+    margin-top: 40pt;
+    vertical-align: top;
+    height: 100pt;
+    width: 100pt;
+    font-size: 20pt;
+    border: black solid 2pt;
+    border-radius: 32pt;
+    background-color: green;
+    display: none;
+}
+
+#send:focus, #but:focus {
+    background-color: lightgreen;
+}
+
+#back {
+    width: 100pt;
+}
+
+.cambuttons {
+    width: 180pt;
+}
+
+.back {
+    margin-top: 30pt;
+    width: 100pt;
+}
+
+.right {
+    width: 100pt;
+    text-align: right;
+}
+
+.center {
+    width: 100pt;
+    text-align: center;
+}
+
+#preview {
+    display: inline-block;
+    width: 300pt;
+    border-radius: 32pt;
+    border: solid black 2pt;
+}
+
+#previewcam {
+    width: 400pt;
+    height: 300pt;
+    border-radius: 32pt;
+    border: solid black 2pt;
+}
+
+#uploadbox {
+    width: 300pt;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#image {
+    display: none;
+}
+
+#imglabel {
+    background-color: orangered;
+    width: 150pt;
+    height: 30pt;
+    margin: 0 auto;
+    border: solid black 2pt;
+    border-radius: 16pt;
+    display: block;
+    padding-top: 10pt;
+    cursor: pointer;
+}
+
+#imglabel:hover {
+    background-color: yellow;
+}
+
+#imgbut {
+    background-color: green;
+    font-size: 24pt;
+    width: 100pt;
+    height: 50pt;
+    border-radius: 8pt;
+}
+
+#imgbut:focus {
+    background-color: lightgreen;
+}
+
+#results {
+    width: 400pt;
+    margin: 0 auto;
+    display: none;
+}
+
+.toggle {
+    width: 130pt;
+    margin: 0 auto;
+}
+
+#toggle {
+    background-color: orange;
+    height: 25pt;
+    border-radius: 8pt;
+    margin-bottom: 5pt;
+}
+
+#toggle:hover {
+    background-color: goldenrod;
+}
+
+#calculate {
+    text-align: center;
+    font-size: 18pt;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday" required>
+    <button type="button" onclick="return calculateAge()">Calculate Age</button>
+</form>
+
+<script>
+    function calculateAge() {
+        const birthday = document.querySelector('input[type="date"]');
+        var today = new Date().toISOString().slice(0, 10);
+        var cYear = Number(today.slice(0, 4));
+        var bYear = Number(birthday.value.slice(0, 4));
+        var cMonth = Number(today.slice(6,7));
+        var bMonth = Number(birthday.value.slice(6,7));
+        var cDay = Number(birthday.value.slice(9,10));
+        var bDay = Number(today.slice(9,10));
+        var age = cYear - bYear;
+
+        if (cMonth <= bMonth && cDay < bDay) {
+            age = age - 1;
+            window.alert("You are " + age);
+        } else if (cMonth == bMonth && cDay == bDay) {
+            window.alert("Happy Birthday! You are " + age);
+        } else {
+            window.alert("You are " + age);
+        }
+    }
+</script>
+
+</body>
+</html>

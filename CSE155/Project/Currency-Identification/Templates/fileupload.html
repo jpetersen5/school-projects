@@ -1,0 +1,78 @@
+<!--Tyler Armstrong-->
+<!--April 24, 2023-->
+<!--CSE 155 final Project-->
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>File Upload</title>
+        <link rel = "stylesheet" href = "../static/src/currencyIdentification.css">  
+        <link rel = "icon" type = "image/jpg" href = "../static/img/coins.jpg" sizes="16x16">
+        <script src = "../static/src/currencyIdentification.js" defer></script>
+    </head>
+
+    <body>
+        <h1>
+            File Upload
+        </h1>
+
+        <form id="upload" action = "/fileupload" method = "POST" enctype = "multipart/form-data">
+            <div id = "uploadbox">
+                <button type = "button" id="toggle" onclick = "return toggleMulti()"><b>Switch to Multiple Coins</b></button>
+                <label for = "image" id = "imglabel">
+                    <b>Upload image here</b>
+                    <input type = "file" id = "image" name = "image" accept = "image/png, image/jpeg">
+                </label>
+                <br>
+                <img id="preview" src="{{ user_image }}" alt="Image not found" onerror="this.onerror=null;this.src='../static/img/coinblank.png';">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                            {{ message }}
+                            <br>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+            </div>
+
+            <div id = "cambuttons"> 
+                <table>
+                    <tr>
+                        <td class = "back">
+                            <div class = "back">
+                                <a href = "home" class = "fullarea">
+                                    <img src = "../static/img/back.png" id = "back">
+                                </a>
+                            </div>
+                        </td>
+                        <td class = "cambuttons">
+                            <button type = "submit" id = "imgbut">Send</button> 
+                        </td>
+                        <td class = "right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+        <div id="calculate">
+            <form id="coin-form">
+                <label for="input_value">Enter a value you'd like to calculate in change:</label>
+                <input type="number" id="input_value" name="input_value" min="0" step="0.01"><br>
+                <label for="quarters">Quarters:</label>
+                <input type="number" id="quarters" name="quarters" min="0" step="1" value="{{ quarters }}">
+                <label for="dimes">Dimes:</label>
+                <input type="number" id="dimes" name="dimes" min="0" step="1" value="{{ dimes }}">
+                <label for="nickels">Nickels:</label>
+                <input type="number" id="nickels" name="nickels" min="0" step="1" value="{{ nickels }}">
+                <label for="pennies">Pennies:</label>
+                <input type="number" id="pennies" name="pennies" min="0" step="1" value="{{ pennies }}">
+                <button type="button" onclick="return submitForm()">Submit</button>
+            </form>
+            <div id="output"></div>
+        </div>
+    </body>
+
+</html>

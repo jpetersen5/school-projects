@@ -1,0 +1,73 @@
+<!--Tyler Armstrong-->
+<!--April 24, 2023-->
+<!--CSE 155 final Project-->
+
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>WebCam</title>
+        <link rel = "stylesheet" href = "../static/src/currencyIdentification.css">  
+        <link rel = "icon" type = "image/jpg" href = "../static/img/coins.jpg" sizes="16x16">
+        <script src = "../static/src/currencyIdentification.js" defer></script>
+    </head>
+
+    <body onload="return camera()">
+        <h1>
+            WebCam Capture
+        </h1>
+
+        <div class = "toggle">
+            <button type = "button" id="toggle" onclick = "return toggleMulti()"><b>Switch to Multiple Coins</b></button>
+        </div>
+
+        <div id = "divvid">
+            <video id = "vid"></video>
+        </div>
+
+        <div id = "results">
+            <img id="previewcam" src="{{ user_image }}" alt="Image not found" onerror="this.onerror=null;this.src='../static/img/coinblank.png';">
+            <br>
+            <canvas id="canvas"></canvas>   
+        </div>
+
+        <div>
+            <br>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                        {% for message in messages %}
+                        {{ message }}
+                        <br>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <br>
+        </div>
+
+        <div id = "cambuttons"> 
+            <table>
+                <tr>
+                    <td class = "back">
+                        <div class = "back">
+                            <a href = "home" class = "fullarea">
+                                <img src = "../static/img/back.png" id = "back">
+                            </a>
+                        </div>
+                    </td>
+                    <td class = "cambuttons">
+                        <button type = "button" id = "but" ><b>Open WebCam</b></button>
+                        <button type = "button" id = "stop" ><b>Stop WebCam</b></button>
+                        <button type = "button" id = "capture"><b>o</b></button>
+                        <button type = "button" id = "send" onclick = ""><b>Send</b></button>
+                    </td>
+                    <td class = "right">
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </body>
+    
+
+</html>

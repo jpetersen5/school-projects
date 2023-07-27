@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Birthday Calculator</title>
+  </head>
+  <body>
+    <h1>Birthday Calculator</h1>
+    <form>
+      <label for="birthdate">Enter your birthdate:</label>
+      <input type="date" id="birthdate">
+      <button type="button" onclick="calculateAge()">Calculate</button>
+    </form>
+    <p id="age"></p>
+    
+    <script>
+      function calculateAge() {
+        const birthdate = new Date(document.getElementById("birthdate").value);
+        const ageInMilliseconds = Date.now() - birthdate.getTime();
+        const ageDate = new Date(ageInMilliseconds);
+        const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+        document.getElementById("age").innerHTML = "You are " + age + " years old.";
+      }
+    </script>
+  </body>
+</html>
