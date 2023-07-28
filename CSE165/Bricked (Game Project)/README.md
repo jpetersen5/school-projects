@@ -3,5 +3,5 @@ Written in C++ and using SFML (Simple and Fast Multimedia Library) and OpenGL. D
 
 All code was written on a Linux VM (Ubuntu 20.04) and successfully compiles and runs on Linux, but runs into compilation issues with Windows I wasn't able to fix. 
 
-Presentation slides for the project:
+Presentation slides with extra details on the project:
 https://docs.google.com/presentation/d/1sMxknVl4ysRO-ZLjaOnEujOJyq9PJ75IID8d8BzwqmU/edit?usp=sharing
