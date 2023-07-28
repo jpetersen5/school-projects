@@ -1,5 +1,5 @@
 # Human-Computer Interaction - Various (Labs), HTML / JS / jQuery / Python (Project) 
-Labs covered a variety of topics about design. Some labs are described but not included. The Currency Identitification project was a group project, my part was designing and creating the Flask backend and cleaning up the JS.
+Labs covered a variety of topics about design. Some labs are described but not included because they were done in other apps. The Currency Identitification project was a group project, my part was designing and creating the Flask backend and cleaning up the JS.
 
 Lab 1: HTML, CSS, and JS
 - Task: Create a form that takes your birth date and calculates your age
