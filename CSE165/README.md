@@ -28,3 +28,6 @@ Lab 5:
 Lab 6:
 - Question 1: Constants, exercise 19
 - Question 2: Name Control, exercise 16
+
+Project: "Bricked"
+- Task: Create a game using OOP principles
